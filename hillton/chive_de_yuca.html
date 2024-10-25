@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chive - Producto Natural</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      transition: all 0.8s ease-out;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  </style>
+  <script>
+    // Animación al hacer scroll
+    window.addEventListener('scroll', function() {
+      let elements = document.querySelectorAll('.fade-in');
+      elements.forEach(function(element) {
+        let position = element.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.2;
+        if (position < screenPosition) {
+          element.classList.add('opacity-100', 'translate-y-0');
+        }
+      });
+    });
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Encabezado -->
+  <header class="bg-green-500 text-white py-6">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold">Chive - Producto Natural</h1>
+        <p class="text-lg mt-2">El mejor producto natural para tu bienestar</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección de Producto -->
+  <section class="container mx-auto py-12 px-4 fade-in">
+    <div class="flex flex-col md:flex-row items-center">
+      <img src=img/chive.jpeg alt="Chive Producto" class="w-64 md:w-96 rounded-lg shadow-md">
+      <div class="md:ml-8 mt-6 md:mt-0">
+        <h2 class="text-3xl font-bold">¿Qué es Chive?</h2>
+        <p class="mt-4">Chive es un producto 100% natural, elaborado por emprendedores benianos, que busca llevar un producto tradicional a mercados nacionales e internacionales. Ideal para quienes desean apoyar la economía local y disfrutar de productos auténticos.</p>
+        <ul class="mt-4 list-disc list-inside">
+          <li>Fácil de consumir</li>
+          <li>Ingredientes naturales</li>
+          <li>Sin aditivos ni conservantes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="bg-white py-12 fade-in">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold">¿Por qué elegir Chive?</h2>
+      <p class="mt-4">Obtendrás múltiples beneficios para tu cuerpo y mente:</p>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-green-100 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold">Salud Digestiva</h3>
+          <p class="mt-2">Mejora el funcionamiento de tu sistema digestivo.</p>
+        </div>
+        <div class="bg-green-100 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold">Energía Natural</h3>
+          <p class="mt-2">Incrementa tus niveles de energía de forma natural.</p>
+        </div>
+        <div class="bg-green-100 p-6 rounded-lg">
+          <h3 class="text-2xl font-bold">Bienestar General</h3>
+          <p class="mt-2">Promueve el bienestar físico y mental.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto con Animación -->
+  <section class="bg-gray-200 py-12 fade-in">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold">¡Contáctanos para más información!</h2>
+      <form class="mt-8 max-w-lg mx-auto bg-white p-8 shadow-md rounded-lg">
+        <div class="mb-4">
+          <label for="name" class="block text-left font-bold">Nombre:</label>
+          <input type="text" id="name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-green-500">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-left font-bold">Correo Electrónico:</label>
+          <input type="email" id="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-green-500">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-left font-bold">Mensaje:</label>
+          <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-green-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Carrito de Compra -->
+  <section class="bg-green-500 text-white py-6 fade-in">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold">¡Compra Chive Ahora!</h2>
+      <p class="mt-2">Haz tu pedido directamente por WhatsApp</p>
+      <a href="https://wa.me/59168982912?text=Quiero%20comprar%20Chive" class="mt-4 inline-block bg-white text-green-500 py-2 px-6 rounded-md shadow-md hover:bg-gray-100">Ir a WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-500 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Chive. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
